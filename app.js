@@ -1,5 +1,5 @@
-import { CallClient, CallAgent } from "@azure/communication-calling";
-import { AzureCommunicationTokenCredential } from '@azure/communication-common';
+import { CallClient } from "./node_modules/@azure/communication-calling";
+import { AzureCommunicationTokenCredential } from './node_modules/@azure/communication-common';
 
 let call;
 let callClient;
