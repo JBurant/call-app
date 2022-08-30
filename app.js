@@ -1,5 +1,5 @@
-import { CallClient } from "@azure/communication-calling";
-import { AzureCommunicationTokenCredential } from '@azure/communication-common';
+var commcalling = require("@azure/communication-calling");
+var commcommon = require('@azure/communication-common');
 
 let call;
 let callClient;
@@ -52,7 +52,7 @@ hangUpPhoneButton.addEventListener("click", () => {
 });
 
 createCallAgentButton.addEventListener("click", async() =>  {
-  callClient = new CallClient();
+  callClient = new commcalling.CallClient();
   const country = callerCountryInput.value;
   const inputTokenCredential = tokenCredentialInput.value;
 
@@ -61,7 +61,7 @@ createCallAgentButton.addEventListener("click", async() =>  {
     emergencyCallOptions: {countryCode: country}
   };
 
-  tokenCredential = new AzureCommunicationTokenCredential(inputTokenCredential);
+  tokenCredential = new commcommon.AzureCommunicationTokenCredential(inputTokenCredential);
   callAgent = await callClient.createCallAgent(tokenCredential,options);
 
   if(callAgent)
