@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'jb-calling-app-1'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F65B414979BE402D8C12416F170ABE72 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_93FBCE8F56064143BFCDC54954AAA427 }}
           package: .
